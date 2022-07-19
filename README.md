@@ -8,7 +8,7 @@ While reading some [course notes](https://ocw.mit.edu/courses/18-703-modern-alge
 
 However, it turns out that this lemma is false. One can quickly find a counterexample at `n = 8`: 11 times 13 = 143 < 256 = 2^8.
 
-This lemma is important for the proof of **Lemma 22.7**, so I was curious to know if this lemma could be fixed by counting out some (small) finite number of counterexamples, and so I wrote the code in this project that day.
+This lemma is important for the proof of **Lemma 22.7**, so I was curious to know if this lemma could be fixed by counting out some (small) finite number of counterexamples (handling these cases separately in the proof of Lemma 22.7), and so I wrote the code in this project that day.
 
 This is written in C++ and uses the Number Theory Library for its bignum support and OpenMP for some very basic parallelism. This code was run for n = 1 to 100000 on a computer with an AMD 3950X and 32 GB DDR4-3600 (14-16-16-32).
 
