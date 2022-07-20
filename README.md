@@ -26,3 +26,6 @@ Counterexample at n = 20
 Product of primes between n and 2n = 765049
 2^n = 1048576
 ```
+
+## Finitely Many counterexamples
+Thanks to some help from Math Stack Exchange, I was able to [analyze the problem](https://math.stackexchange.com/a/4496606/114928) and find that the only possible counterexamples occur below 39417055. The code has been updated to support this analysis, so all that is left is to check all integers up to this limit.
