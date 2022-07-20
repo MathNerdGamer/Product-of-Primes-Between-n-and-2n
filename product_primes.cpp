@@ -41,9 +41,9 @@ std::vector<int64_t> primes_between( std::int64_t first,
 int main(int argc, char **argv)
 {
     int upper_bound = 1000000;
-    constexpr int MAX_BOUND = 39500000;
-    // Need only check up to a little below this limit for all possible counterexamples.
-    // https://math.stackexchange.com/a/4496606/114928
+    constexpr int MAX_BOUND = 10544111;
+    // Need only check up to a this limit for all possible counterexamples.
+    // https://math.stackexchange.com/a/4496643/114928
 
     // Get upper bound.
     if( argc > 1 )
