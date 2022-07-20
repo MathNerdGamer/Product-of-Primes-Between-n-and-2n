@@ -94,7 +94,7 @@ int main(int argc, char **argv)
             auto prime_list{ primes_between( n, 2 * n ) };
 
             // Calculate 2^n
-            exponentials[id].value = NTL::power( NTL::ZZ{ 2 }, n );
+            exponentials[id].value <<= n - exponentials[id].exponent;
             exponentials[id].exponent = n;
 
             // Calculate product of primes from list.
