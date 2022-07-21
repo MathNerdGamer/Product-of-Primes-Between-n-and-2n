@@ -1,0 +1,12 @@
+Counterexample at n = 8
+Product of primes between n and 2n = 143
+2^n = 256
+
+Counterexample at n = 14
+Product of primes between n and 2n = 7429
+2^n = 16384
+
+Counterexample at n = 20
+Product of primes between n and 2n = 765049
+2^n = 1048576
+Final case checked after 0.005569 seconds.
