@@ -107,19 +107,6 @@ int main(int argc, char **argv)
         {
             auto N{ ( primes[n] - 1 ) / 2 };
 
-            if( n % 1000 == 0 )
-            {
-                auto current_time{ high_resolution_clock::now() };
-
-                auto current_duration{ duration_cast<microseconds>( current_time - start_time ) / 1000.0 };
-
-                std::cout << "Thread " << id << " has reached " << N << " (n = " << n << ") after "
-                          << current_duration.count() / 1000.0 << " seconds.\n";
-
-                out_file  << "Thread " << id << " has reached " << N << " (n = " << n << ") after "
-                          << current_duration.count() / 1000.0 << " seconds.\n";
-            }
-
             // Get primes between N and 2N.
             auto prime_list{ primes_between(N, 2 * N) };
 
@@ -151,8 +138,6 @@ int main(int argc, char **argv)
     }
     // End of OpenMP block.
 
-    std::cout << "\n\n\n";
-
     std::sort( std::begin( counterexamples ), std::end( counterexamples ),
                []( Counterexample const &a, Counterexample const &b )
                { return a.n < b.n; } );
@@ -180,8 +165,8 @@ int main(int argc, char **argv)
     auto final_time{ high_resolution_clock::now() };
     auto final_duration{ duration_cast<microseconds>( final_time - start_time ) / 1000.0 };
 
-    std::cout << "Final case checked after " << final_duration.count() / 1000.0 << " seconds.\n";
-    out_file  << "Final case checked after " << final_duration.count() / 1000.0 << " seconds.\n";
+    std::cout << "\nFinal case checked after " << final_duration.count() / 1000.0 << " seconds.\n";
+    out_file  << "\nFinal case checked after " << final_duration.count() / 1000.0 << " seconds.\n";
 
     return EXIT_SUCCESS;
 }
